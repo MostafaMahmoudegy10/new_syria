@@ -56,27 +56,27 @@ const About = () => {
           </p>
           <div className="w-[150px] h-[4px] rounded-[4px] bg-[linear-gradient(to_right,rgba(0,132,75,1),rgba(233,200,130,1))]"></div>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-4">
+        <div className="flex  flex-col lg:flex-row justify-center items-center gap-4 mb-4">
           {[
             {
               headline: "رئيس تحرير",
-              Icon: "public/pexels-hasanabwini-9923562.jpg",
+              Icon: "pexels-hasanabwini-9923562.jpg",
               name:"مصطفى محمود"
             },
             {
               headline: "رئيس تحرير",
-              Icon: "public/pexels-italo-melo-881954-2379004.jpg",
+              Icon: "pexels-italo-melo-881954-2379004.jpg",
                name:"احمد محمود"
             },
             {
               headline: "رئيس تحرير",
-              Icon: "public/pexels-rdne-8124213.jpg",
+              Icon: "pexels-rdne-8124213.jpg",
                name:"محمد محمود"
             },
           ].map(({ headline, Icon,name}, indx) => (
                <div
               key={indx}
-              className="bg-[rgba(255,255,255,0.05)] rounded-md px-6 py-6 border-t-2 border-t-[rgba(0,132,75,1)] w-[30%] flex flex-col items-center gap-3"
+              className="w-full bg-[rgba(255,255,255,0.05)] rounded-md px-6 py-6 border-t-2 border-t-[rgba(0,132,75,1)] lg:w-[30%] flex flex-col items-center gap-3"
             >
               <img
                 src={Icon}
