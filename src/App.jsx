@@ -1,14 +1,27 @@
-import Header from './components/Header';
-import NewsContextProvider from './store/NewsContextProvider';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import Header from "./components/Header";
+import NewsContextProvider from "./store/NewsContextProvider";
+
+import About from "./pages/About.jsx";
 
 function App() {
   return (
-      <div className="bg-[linear-gradient(to_bottom,rgba(0,64,37,1),rgba(255,255,255,0.8),rgba(0,64,37,0.5))] h-[100vh] w-full">
-        <NewsContextProvider> 
+    <div className="min-h-screen w-full flex flex-col"> 
+      <NewsContextProvider>
+        <Router>
           <Header />
-        </NewsContextProvider>
-      </div>
-  )
+          <Routes>
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </Router>
+      </NewsContextProvider>
+    </div>
+  );
 }
 
-export default App
+export default App;
